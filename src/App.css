@@ -1,0 +1,76 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.app h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.app p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 3rem;
+}
+
+.demo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.demo-section {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+}
+
+.demo-section h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.date-input {
+  width: 200px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.date-input:focus {
+  outline: none;
+  border-color: #646cff;
+  box-shadow: 0 0 0 2px rgba(100, 108, 255, 0.2);
+}
+
+.demo-section p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  .demo-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .demo-section {
+    flex: 1;
+  }
+}
