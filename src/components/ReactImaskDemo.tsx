@@ -27,6 +27,26 @@ const ReactImaskDemo: React.FC = () => {
             },
           }
         }
+        format={(date: Date | null) => {
+          if (!date) return '';
+          const day = date.getDate();
+          const month = date.getMonth() + 1;
+          const year = date.getFullYear();
+
+          const dayStr = day < 10 ? "0" + day : day.toString();
+          const monthStr = month < 10 ? "0" + month : month.toString();
+
+          return [year, monthStr, dayStr].join('-');
+        }}
+        parse={(str: string) => {
+          const yearMonthDay = str.split('-');
+          return new Date(parseInt(yearMonthDay[0]), parseInt(yearMonthDay[1]) - 1, parseInt(yearMonthDay[2]));
+        }}
+        min={new Date(2000, 0, 1)}  // defaults to `1900-01-01`
+        max={new Date(2020, 0, 1)}  // defaults to `9999-01-01`
+        autofix={true}
+        lazy={false}
+        overwrite={true}
         className="date-input"
       />
     </div>

@@ -9,8 +9,6 @@ const ReactInputMaskDemo: React.FC = () => {
       <h2>@react-input/mask</h2>
       <input
         ref={inputRef}
-        type="text"
-        placeholder="____/__/__"
         className="date-input"
       />
     </div>
